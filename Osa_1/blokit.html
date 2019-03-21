@@ -1,0 +1,52 @@
+<!--Responsiivisuutta voi toteuttaa monella tavalla. Hyvin suunniteltuna myös pixeleitä apuna käyttäen ja yhdistelemällä eri tekniikoita.-->
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<title>html ja px RWD -demo</title>
+<!--viewport meta -tagi antaa selaimelle ohjeet sivun skaalaukseen päätelaitteen leveyden mukaan,
+	initial scale 1.0 asettaa sivun zoom-levelin päätelaitteen leveyden mukaan eli ei zoomailuja-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<style>
+/*Bodyn leveys 100% näyttöpäätteestä max. 960px leveyteen asti, jonka jälkeen sivusto keskittyy - testaa emulaattorilla! Miten sivusto käyttäytyy jos max-leveyden ottaa pois -testaa!*/    
+body{
+width:100%;
+max-width:960px;
+margin:auto;
+background-color:lightgreen;
+}
+/*Kellutuksella (float) kortit siirtyvät seuraavalle riville leveyden loppuessa. Mitä "ongelmia" tilankäytön suhteen absoluuttiset pixelileveydet aiheuttavat siirryttäessä desktopista yhä pienempiin päätelaitteisiin? Testaa emulaattorilla*/  
+.kortti {
+    float: left;
+    margin: 5px;
+    padding: 4px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+<h1>html ja px RWD -demo</h1>
+<div class="kortti">
+  <h2>Kortti 1</h2>
+  <p>Responsiivinen sovellus taipuu kaikille laitteille</p>
+  <p>Kannattaa käyttää mittayksiköitä, jotka taipuu näyttöpäätteen muuttuessa.</p>
+</div>
+
+<div class="kortti">
+  <h2>Kortti 2</h2>
+  <p>Responsiivinen sovellus taipuu kaikille laitteille</p>
+  <p>Kannattaa käyttää myös @media rules ja breakpointteja.</p>
+</div>
+
+<div class="kortti">
+  <h2>Kortti 3</h2>
+  <p>Responsiivinen sovellus taipuu kaikille laitteille</p>
+  <p>Responsiivisia sivuja voi toteuttaa monella tavalla. 
+  Kannattaa kuitenkin pitää layout mahdollisimman yksinkertaisena ja testata.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/*Bodyn leveys 100% näyttöpäätteestä max. 960px leveyteen asti, jonka jälkeen sivusto keskittyy - testaa emulaattorilla! Miten sivusto käyttäytyy jos max-leveyden ottaa pois -testaa!*/
+body {
+    background-color:lightgreen;
+	width:100%;
+	max-width:960px;
+	margin:auto;
+	
+}
+h1,h2,h3,p{
+	margin:0;
+}
+
+#content img{
+	max-width:30%;
+	height:auto;
+	float:left;
+	margin:1%;
+	
+}
+
+/*Kaikki .col-luokkaa oleville samat arvot*/
+.col{
+	display: block;
+	float:left;
+	width:30.33%;
+    margin: 1%;
+	padding:0.5%;
+	background-color: white;
+	text-align:center;
+}
+/*Kaikki #-diveille samat arvot*/
+#header, #content, #footer{
+	width:97%;
+	overflow:auto;
+	margin: 1% 1% 1% 1%;
+	padding:0.5%;
+	background-color: white;
+	clear:both;
+	
+}
+
+/*@media rules ja breakpointit*/
+
+/*Mobiili portrait*/
+@media only screen and (max-width: 480px) and (orientation:portrait) {
+    body {
+        background-color:lightblue;
+		
+    }
+	.col{
+		clear:both;
+		width:97%;
+		margin:1% 1% 1% 1%;
+		font-size:2em;
+	}
+}
+
+/*Mobiili landscape*/
+@media only screen and (max-width: 480px) and (orientation:landscape) {
+    body {
+        background-color:purple;
+		font-size:2em;
+    }
+	.col{
+		clear:both;
+		width:97%;
+		margin:1% 1% 1% 1%;
+		
+	}
+}
+
+/*Tabletit/orientaatio landscape*/
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:portrait){
+	body {
+        background-color:hotpink;
+		
+    }
+}
+
+
+/*Tabletit/orientaatio landscape*/
+@media only screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape){
+	body {
+        background-color:pink;
+		
+    }
+}
+
+/*Laptop/Desktop */
+@media only screen and (min-width:1024px){
+	body{
+		background-color:black;
+	}
+}
+
+
+
+
