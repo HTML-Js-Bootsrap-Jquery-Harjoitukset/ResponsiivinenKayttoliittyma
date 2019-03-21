@@ -1,0 +1,29 @@
+@media only screen and (max-width: 600px){
+    .Icons{
+        display: none;
+    }
+    .grid-container{
+        font-size: 50%;
+    }
+    .varit .sininen .vihrea .keltainen .punainen{
+        font-size: 30px;
+    }
+    body{
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .Icons{
+        display: block;
+    }
+    body{
+        margin-top: 25px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }  
+    
+}
+
